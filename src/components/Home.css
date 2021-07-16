@@ -1,0 +1,120 @@
+.container .nav {
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container .nav .button--switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  /* Rounded sliders */
+}
+
+.container .nav .button--switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .nav .button--switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 45%;
+  left: 2px;
+  bottom: 2px;
+  background-color: #0c0c0ced;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .nav .button--switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container .nav .button--switch input:checked + .slider {
+  background-color: #0c0c0ced;
+}
+
+.container .nav .button--switch input:checked + .slider:before {
+  background-color: #f1f1f1;
+}
+
+.container .nav .button--switch input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.container .nav .button--switch .round {
+  border-radius: 34px;
+}
+
+.container .nav .button--switch .round:before {
+  border-radius: 50%;
+}
+
+.container .header {
+  background-color: aquamarine;
+  margin-bottom: 5%;
+}
+
+.container .main-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+  padding: 0 5% 5% 5%;
+  color: rgba(0, 0, 0, 0.753);
+}
+
+.container .main-body > div:not(:last-child) {
+  height: 350px;
+  width: 100%;
+  background: #dbc5c5;
+  text-align: center;
+}
+
+.container .main-body .btn-relod {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-body .btn-relod button {
+  padding: 5px 10px;
+  font-size: large;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: cadetblue;
+  margin-bottom: 1%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+  color: rgba(0, 0, 0, 0.377);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.container .main-body .btn-relod button:hover {
+  background-color: rgba(0, 0, 0, 0.644);
+  color: rgba(248, 248, 247, 0.822);
+}
