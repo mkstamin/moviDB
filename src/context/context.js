@@ -4,16 +4,14 @@ import { POPULAR_MOVIES } from '../API-config';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-    const [state, setState] = useState([]);
-
-    console.log(state);
+    const [movies, setMovies] = useState([]);
 
     const fatchMovies = async () => {
         try {
             const response = await fetch(POPULAR_MOVIES);
-            const movies = await response.json();
-            const results = await movies.results;
-            setState(results);
+            const data = await response.json();
+            const results = await data.results;
+            setMovies(results);
         } catch (error) {
             console.log('Error, To connection!');
         }
@@ -26,7 +24,7 @@ const AppProvider = ({ children }) => {
     return (
         <AppContext.Provider
             value={{
-                state,
+                movies,
             }}
         >
             {children}
