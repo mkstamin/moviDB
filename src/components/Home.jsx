@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 import { IMAGE_URL } from '../API-config';
 import { AppContext } from '../context/context';
 import './Home.css';
+import Loding from './Loding/Loding';
+import Search from './Search/Search';
 
 const Home = () => {
-    const { movies } = useContext(AppContext);
+    const { movies, loding } = useContext(AppContext);
 
     const banarImg = `${IMAGE_URL}w1280${movies[0]?.backdrop_path}`;
 
-    // console.log(banarImg);
-    // console.log(movies[0]);
+    if (loding) return <Loding />;
+
     return (
         <div className="container">
             <div className="nav">
@@ -24,6 +26,7 @@ const Home = () => {
             <div className="header">
                 <img src={banarImg} alt="banarImg" />
             </div>
+            <Search />
             <div className="main-body">
                 {movies.map((movie) => {
                     const img = `${IMAGE_URL}w780${movie?.poster_path}`;
