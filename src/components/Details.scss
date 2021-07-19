@@ -26,6 +26,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #000000b5;
+    font-size: larger;
   }
 
   &__actors {
@@ -56,6 +57,25 @@
         padding: 1% 2%;
         background-color: rgba(0, 0, 0, 0.404);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .movie__details {
+    padding: 0px 5%;
+    width: 90%;
+    height: 100%;
+    border: none;
+  }
+  .movie__cover-img img {
+    height: 50vh;
+  }
+  .movie__actors {
+    .actor--name {
+      font-size: x-small;
+      left: 0;
+      margin: auto;
     }
   }
 }
