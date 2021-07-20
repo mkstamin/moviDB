@@ -49,8 +49,6 @@ const AppProvider = ({ children }) => {
         }
     }, [fatchMovieByName, fatchMovies, searchItem]);
 
-    // if (!loding) console.log(movies);
-
     return (
         <AppContext.Provider
             value={{

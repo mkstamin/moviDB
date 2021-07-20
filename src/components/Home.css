@@ -173,6 +173,6 @@
 
 @media only screen and (max-width: 667px) {
   .container .header img {
-    height: 55vh;
+    height: 20rem;
   }
 }

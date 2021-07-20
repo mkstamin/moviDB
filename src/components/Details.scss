@@ -62,20 +62,25 @@
 }
 
 @media only screen and (max-width: 667px) {
-  .movie__details {
-    padding: 0px 5%;
-    width: 90%;
-    height: 100%;
-    border: none;
-  }
-  .movie__cover-img img {
-    height: 50vh;
-  }
-  .movie__actors {
-    .actor--name {
+  .movie {
+    &__details {
+      padding: 0px 5%;
+      width: 90%;
+      height: 100%;
+      border: none;
+    }
+    .heading {
       font-size: x-small;
-      left: 0;
-      margin: auto;
+    }
+    &__cover-img img {
+      height: 22rem;
+    }
+    &__actors {
+      .actor--name {
+        font-size: x-small;
+        left: 0;
+        margin: auto;
+      }
     }
   }
 }

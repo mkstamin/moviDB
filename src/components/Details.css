@@ -71,8 +71,11 @@
     height: 100%;
     border: none;
   }
+  .movie .heading {
+    font-size: x-small;
+  }
   .movie__cover-img img {
-    height: 50vh;
+    height: 22rem;
   }
   .movie__actors .actor--name {
     font-size: x-small;
