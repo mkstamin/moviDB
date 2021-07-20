@@ -2,9 +2,11 @@
   position: absolute;
   top: 30%;
   left: 5%;
+  width: 33%;
   background: #ffffffad;
   padding: 1%;
   border-radius: 4px;
+  text-align: justify;
 }
 
 .header__content > h1:nth-child(1) {
@@ -30,6 +32,7 @@
   .header__content {
     top: 15%;
     margin-right: 6%;
+    width: auto;
   }
   .header__content > h1:nth-child(1) {
     font-size: x-small;

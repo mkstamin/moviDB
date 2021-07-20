@@ -10,7 +10,7 @@ import Loding from './Loding/Loding';
 import Search from './Search/Search';
 
 const Home = () => {
-    const { movies, loding, setPage, page } = useContext(AppContext);
+    const { movies, searchItem, loding, setPage, page } = useContext(AppContext);
 
     const banarImg = movies[0]?.backdrop_path
         ? `${IMAGE_URL}w1280${movies[0]?.backdrop_path}`
@@ -47,11 +47,15 @@ const Home = () => {
                         </Link>
                     );
                 })}
-                <div className="btn-relod">
-                    <button type="button" onClick={() => setPage(page + 1)}>
-                        reload more...
-                    </button>
-                </div>
+                {searchItem ? (
+                    ''
+                ) : (
+                    <div className="btn-relod">
+                        <button type="button" onClick={() => setPage(page + 1)}>
+                            reload more...
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );
