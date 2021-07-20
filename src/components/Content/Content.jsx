@@ -7,8 +7,7 @@ const Content = () => (
         <h2>This is a movie DB site</h2>
         <p>
             <samp>
-                Here you can search your fevorite movie <br />
-                And you can see the detalis about this <br />
+                Here you can search your fevorite movie And you can see the detalis about this
                 movie. Also you can see some most popular movies.
             </samp>
         </p>
