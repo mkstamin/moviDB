@@ -41,11 +41,8 @@ const AppProvider = ({ children }) => {
     useEffect(() => {
         if (searchItem) {
             fatchMovieByName();
-
-            // console.log('fatchMovieByName');
         } else {
             fatchMovies();
-            // console.log('fatchMovies');
         }
     }, [fatchMovieByName, fatchMovies, searchItem]);
 

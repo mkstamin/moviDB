@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
-import Details from './components/Details';
-import Home from './components/Home';
+import Details from './page/Details/Details';
+import Home from './page/Home/Home';
 
 function App() {
     return (

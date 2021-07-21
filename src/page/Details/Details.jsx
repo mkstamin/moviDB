@@ -1,31 +1,28 @@
 /* eslint-disable camelcase */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { API_KEY, API_URL, IMAGE_URL } from '../API-config';
-import nobanar from '../img/nobanar.jpg';
-import noimg from '../img/onimg.png';
+import { API_KEY, API_URL, IMAGE_URL } from '../../API-config';
+import Loding from '../../components/Loding/Loding';
+import nobanar from '../../img/nobanar.jpg';
+import noimg from '../../img/onimg.png';
 import './Details.css';
-import Loding from './Loding/Loding';
 
 const Details = () => {
     const [movie, setMovie] = useState({});
     const [lodin, setLodin] = useState(true);
     const { slug } = useParams();
 
-    const urlMovie = `${API_URL}movie/${slug}?api_key=${API_KEY}`;
-    const urlCasts = `${API_URL}movie/${slug}/credits?api_key=${API_KEY}`;
-
     const fatchMovie = useCallback(async () => {
-        const response = await fetch(urlMovie);
+        const response = await fetch(`${API_URL}movie/${slug}?api_key=${API_KEY}`);
         const data = await response.json();
         return data;
-    }, [urlMovie]);
+    }, [slug]);
 
     const fatchCasts = useCallback(async () => {
-        const response = await fetch(urlCasts);
+        const response = await fetch(`${API_URL}movie/${slug}/credits?api_key=${API_KEY}`);
         const data = await response.json();
         return data;
-    }, [urlCasts]);
+    }, [slug]);
 
     useEffect(() => {
         const movieWithCasts = async () => {
