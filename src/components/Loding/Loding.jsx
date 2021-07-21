@@ -1,10 +1,10 @@
 import React from 'react';
-import './Loding.css';
+import LodingContainer from './Loding.styles';
 
 const Loding = () => (
-    <div className="loding">
+    <LodingContainer>
         <h1 className="loding-text">Loding.......</h1>
-    </div>
+    </LodingContainer>
 );
 
 export default Loding;

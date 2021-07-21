@@ -1,4 +1,6 @@
-.loding {
+import Styled from 'styled-components';
+
+const LodingContainer = Styled.div`
   position: relative;
   height: 100vh;
 
@@ -9,4 +11,6 @@
     transform: translate(-50%, -50%);
     font-size: 3rem;
   }
-}
+`;
+
+export default LodingContainer;

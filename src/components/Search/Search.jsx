@@ -1,19 +1,19 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../context/context';
-import './Search.css';
+import SearchContainer from './Search.styles';
 
 const Search = () => {
     const { searchItem, setSearchItem } = useContext(AppContext);
 
     return (
-        <div className="search">
+        <SearchContainer>
             <input
                 type="text"
                 onChange={(e) => setSearchItem(e.target.value)}
                 value={searchItem}
                 placeholder="Search you movie....."
             />
-        </div>
+        </SearchContainer>
     );
 };
 

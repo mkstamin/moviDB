@@ -4,7 +4,7 @@ import HomeBody from '../../components/HomeBody/HomeBody';
 import Loding from '../../components/Loding/Loding';
 import Nav from '../../components/Nav/Nav';
 import { AppContext } from '../../context/context';
-import './Home.css';
+import HomeContainer from './Home.styles';
 
 const Home = () => {
     const { loding } = useContext(AppContext);
@@ -12,14 +12,14 @@ const Home = () => {
     if (loding) return <Loding />;
 
     return (
-        <div className="container">
+        <HomeContainer>
             <Nav />
             <Header />
             <div className="populaer-movie">
                 <h1 className="heading">Popular movies</h1>
             </div>
             <HomeBody />
-        </div>
+        </HomeContainer>
     );
 };
 
